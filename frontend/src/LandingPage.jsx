@@ -15,7 +15,7 @@ const LandingPage = () => {
         <nav className="flex flex-wrap justify-center gap-8 text-gray-700 text-lg font-medium">
           {/* Using Link components for navigation */}
           <Link to="/" className="focus:outline-none hover:bg-red-100 rounded-md px-2 py-1 transition-colors duration-200">Home</Link>
-          <Link to="/hot-item" className="focus:outline-none hover:bg-red-100 rounded-md px-2 py-1 transition-colors duration-200">Hot Item</Link>
+          {/* <Link to="/hot-item" className="focus:outline-none hover:bg-red-100 rounded-md px-2 py-1 transition-colors duration-200">Hot Item</Link> */}
           <Link to="/menu" className="focus:outline-none hover:bg-red-100 rounded-md px-2 py-1 transition-colors duration-200">Menus</Link>
           <Link to="/contact-us" className="focus:outline-none hover:bg-red-100 rounded-md px-2 py-1 transition-colors duration-200">Contact us</Link>
           <button className="bg-red-500 text-white px-5 py-2 rounded-full hover:bg-red-600 transition">
@@ -52,7 +52,7 @@ const LandingPage = () => {
         {/* Image Content */}
         <div className="lg:w-1/2 mt-10 lg:mt-0 flex justify-center relative">
           <img
-            src="/images/burger.png" // Ensure this image path is correct in your public folder
+            src="https://logopond.com/logos/0ac4facc18b93551fa2d08ae7b2f8df3.png" // Ensure this image path is correct in your public folder
             alt="Burger"
             className="w-80 md:w-[26rem] drop-shadow-2xl object-contain"
           />

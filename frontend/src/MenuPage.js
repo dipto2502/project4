@@ -7,42 +7,42 @@ const MenuPage = () => {
       name: 'Classic Burger',
       description: 'Juicy beef patty, lettuce, tomato, onion, cheese, and our special sauce on a toasted bun.',
       price: '$9.99',
-      image: '/images/classic-burger.jpg', // Replace with actual image path
+      image: 'https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/1:1/w_2560%2Cc_limit/Smashburger-recipe-120219.jpg', // Replace with actual image path
     },
     {
       id: 2,
       name: 'Spicy Chicken Sandwich',
       description: 'Crispy fried chicken breast tossed in a spicy sauce with pickles and coleslaw.',
       price: '$10.50',
-      image: '/images/spicy-chicken.jpg', // Replace with actual image path
+      image: 'https://meikoandthedish.com/wp-content/uploads/2023/07/spicy-southern-buttermilk-fried-chicken-7.jpg', // Replace with actual image path
     },
     {
       id: 3,
       name: 'Vegetarian Pizza',
       description: 'A delicious pizza topped with a variety of fresh vegetables and mozzarella cheese.',
       price: '$12.00',
-      image: '/images/veggie-pizza.jpg', // Replace with actual image path
+      image: 'https://assets.surlatable.com/m/15a89c2d9c6c1345/72_dpi_webp-REC-283110_Pizza.jpg', // Replace with actual image path
     },
     {
       id: 4,
       name: 'Pasta Carbonara',
       description: 'Spaghetti with a creamy sauce made from eggs, cheese, pancetta, and black pepper.',
       price: '$11.75',
-      image: '/images/carbonara.jpg', // Replace with actual image path
+      image: 'https://static01.nyt.com/images/2021/02/14/dining/carbonara-horizontal/carbonara-horizontal-threeByTwoMediumAt2X-v2.jpg', // Replace with actual image path
     },
     {
       id: 5,
       name: 'Fresh Salad',
       description: 'A mix of seasonal greens with your choice of dressing and protein add-ons.',
       price: '$8.50',
-      image: '/images/salad.jpg', // Replace with actual image path
+      image: 'https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2019/04/Cobb-Salad-main.jpg', // Replace with actual image path
     },
     {
       id: 6,
       name: 'Chocolate Brownie',
       description: 'Warm and fudgy chocolate brownie served with a scoop of vanilla ice cream.',
       price: '$6.00',
-      image: '/images/brownie.jpg', // Replace with actual image path
+      image: 'https://bluebowlrecipes.com/wp-content/uploads/2024/06/fudgy-brown-butter-brownies-4134.jpg', // Replace with actual image path
     },
   ];
 
