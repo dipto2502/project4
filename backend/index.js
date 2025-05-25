@@ -1,40 +1,26 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const cors = require('cors');
+const dotenv = require('dotenv');
+const menuRoutes = require('./routes/menuItems');
+const userRoutes = require('./routes/userRoutes'); // Import user routes
+
+dotenv.config();
+
 const app = express();
-const PORT = 5000;
-import './index.css';
+app.use(cors()); // Consider specifying origins for production: app.use(cors({ origin: 'https://yourfrontend.com' }));
+app.use(express.json()); // Body parser middleware for JSON
 
-// Enable CORS
-app.use(cors());
+// API Routes
+app.use('/api/menu-items', menuRoutes);
+app.use('/api/users', userRoutes); // Use user routes
 
-// Dummy menu data
-const menuItems = [
-  {
-    id: 1,
-    name: "Margherita Pizza",
-    price: 12.99,
-    image: "https://via.placeholder.com/400x300?text=Margherita+Pizza"
-  },
-  {
-    id: 2,
-    name: "Spaghetti Carbonara",
-    price: 14.49,
-    image: "https://via.placeholder.com/400x300?text=Spaghetti+Carbonara"
-  },
-  {
-    id: 3,
-    name: "Tiramisu",
-    price: 6.50,
-    image: "https://via.placeholder.com/400x300?text=Tiramisu"
-  }
-];
+const PORT = process.env.PORT || 5000;
+const MONGO_URI = process.env.MONGODB_URI; // Corrected variable name
 
-// Define a route
-app.get('/api/menu', (req, res) => {
-  res.json(menuItems);
-});
-
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Backend server is running at http://localhost:${PORT}`);
-});
+mongoose.connect(MONGO_URI) // Mongoose 6+ doesn't need useNewUrlParser/useUnifiedTopology
+  .then(() => {
+    console.log('MongoDB connected');
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+  })
+  .catch(err => console.error('MongoDB connection error:', err));

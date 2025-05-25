@@ -15,12 +15,12 @@ const LandingPage = () => {
         <nav className="flex flex-wrap justify-center gap-8 text-gray-700 text-lg font-medium">
           {/* Using Link components for navigation */}
           <Link to="/" className="focus:outline-none hover:bg-red-100 rounded-md px-2 py-1 transition-colors duration-200">Home</Link>
-          {/* <Link to="/hot-item" className="focus:outline-none hover:bg-red-100 rounded-md px-2 py-1 transition-colors duration-200">Hot Item</Link> */}
           <Link to="/menu" className="focus:outline-none hover:bg-red-100 rounded-md px-2 py-1 transition-colors duration-200">Menus</Link>
           <Link to="/contact-us" className="focus:outline-none hover:bg-red-100 rounded-md px-2 py-1 transition-colors duration-200">Contact us</Link>
-          <button className="bg-red-500 text-white px-5 py-2 rounded-full hover:bg-red-600 transition">
+          {/* Changed "Join" button to a Link to the registration page */}
+          <Link to="/register" className="bg-red-500 text-white px-5 py-2 rounded-full hover:bg-red-600 transition">
             Join
-          </button>
+          </Link>
         </nav>
       </header>
 
